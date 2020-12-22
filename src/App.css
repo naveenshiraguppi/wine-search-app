@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  height: 121px;
+width: 824px;
+left: 328px;
+top: 142px;
+border-radius: 0px;
+
 }
 
 .App-logo {
@@ -14,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #E5E5E5;
+  background-color: #F5F5F5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,6 +30,17 @@
   color: white;
 }
 
+.label {
+  //styleName: H3 Light 26px;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #0F1010;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +52,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.search {
+  height: 48px;
+width: 724px;
+left: 0px;
+top: 0px;
+border-radius: 0px;
+
 }
