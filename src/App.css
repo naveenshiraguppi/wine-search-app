@@ -62,3 +62,66 @@ top: 0px;
 border-radius: 0px;
 
 }
+
+.searchReslutLotCode {
+ 
+  //styleName: Label Light 15px;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 300;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+color: #0F1010;
+}
+
+.searchReslutDesc {
+  position: static;
+width: 184px;
+height: 18px;
+left: 0px;
+bottom: 0px;
+
+/* Label Light 13px */
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 13px;
+line-height: 18px;
+/* identical to box height, or 138% */
+
+display: flex;
+align-items: center;
+
+/* #3A3B3B */
+
+color: #3A3B3B;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+.searchResultBox {
+  position: static;
+width: 624px;
+height: 56px;
+left: 0px;
+top: 1px;
+
+/*  #FFFFFF */
+
+background: #FFFFFF;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}

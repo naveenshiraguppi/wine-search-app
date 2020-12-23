@@ -15,34 +15,49 @@ function App() {
   );
 }
 
-function Results({ records }) {
-  return (
-    <ul>
-      {
-        <li className="label">{JSON.stringify(records, undefined, 2)}</li>
-      }
-    </ul>
-  );
-}
 function SearchText() {
   const [val, setVal] = useState("");
   const [data, setData] = useState(null);
-  useEffect(() => {
-    setData(null);
-    fetch('http://localhost:8080/api/search/' + val)
-    .then(res => res.json())
-    .then(setData)
-    .catch(console.error);
-  }, [val]);
   
+  useEffect(() => {
+    console.log('val: ' + val);
+    if(val) {
+      setData(null);
+      console.log('is array1: ' + Array.isArray(data));
+      fetch('http://localhost:8080/api/search/' + val)
+        .then(res => {return res.json()})
+        .then(setData)
+        .catch(console.error);
+        
+    }
+  }, [val]);
 
+  const result1 = ["one", "two"];
+
+  function ResultLine (props) {
+    return (
+      <ul>
+        { props.result != null && 
+          props.result.map(e=> ( 
+            <div className="searchResultBox">
+              <p className="searchReslutLotCode">{e.lotCode}</p>
+              <p className="searchReslutDesc">{e.description}</p>
+            </div>
+          ))}
+      </ul>
+    );
+  }
+  
+  
   return (
     <>
         <input id="searchtext" name="searchtext" type="input"
              className="search" placeholder="Search by lot code or description...."
              value = {val}
              onChange={ e => setVal(e.target.value)}/>
-       <Results records={data}/>
+        <ResultLine result={data}/>
+
+        
     </>
   );
 }
